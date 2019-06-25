@@ -24,6 +24,7 @@ CREATE TABLE `proveedor` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL,
+  `nombre` varchar(20) not null,
   `precio` FLOAT NOT NULL,
   `cantidad` int not null,
   `id_proveedor` int not null,
