@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pe.edu.unsch.entities.ProveedorEntity" table="proveedor" schema="almacenbd">
+        <id name="idProveedor" column="id_proveedor"/>
+        <property name="nombreProveedor" column="nombre_proveedor"/>
+        <property name="ciudad" column="ciudad"/>
+        <property name="pais" column="pais"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pe.edu.unsch.entities.ProductoEntity" table="producto" schema="almacenbd">
+        <id name="idProducto" column="id_producto"/>
+        <property name="nombre" column="nombre"/>
+        <property name="precio" column="precio"/>
+        <property name="cantidad" column="cantidad"/>
+        <property name="idProveedor" column="id_proveedor"/>
+    </class>
+</hibernate-mapping>
