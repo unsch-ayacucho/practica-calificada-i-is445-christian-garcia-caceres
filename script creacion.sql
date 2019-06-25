@@ -13,7 +13,7 @@
 use almacenbd;
 
 CREATE TABLE `proveedor` (
-  `id_proveedor` int(11) NOT NULL,
+  `id_proveedor` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_proveedor` varchar(20) not null,
   `ciudad` VARCHAR(20) NOT NULL,
   `pais` VARCHAR(20) not null,
@@ -23,7 +23,7 @@ CREATE TABLE `proveedor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `producto` (
-  `id_producto` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) not null,
   `precio` FLOAT NOT NULL,
   `cantidad` int not null,
