@@ -1,3 +1,4 @@
+create database `almacenbd`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,7 +15,7 @@ use almacenbd;
 
 CREATE TABLE `proveedor` (
   `id_proveedor` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre_proveedor` varchar(20) not null,
+  `nombre_proveedor` varchar(30) not null,
   `ciudad` VARCHAR(20) NOT NULL,
   `pais` VARCHAR(20) not null,
   PRIMARY KEY (`id_proveedor`),
@@ -24,7 +25,7 @@ CREATE TABLE `proveedor` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(20) not null,
+  `nombre` varchar(30) not null,
   `precio` FLOAT NOT NULL,
   `cantidad` int not null,
   `id_proveedor` int not null,
@@ -32,18 +33,13 @@ CREATE TABLE `producto` (
   KEY `id_producto` (`id_producto`),
   FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
+use almacenbd;
 
-
-/*!40101 SET character_set_client = @saved_cs_client */;
-
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+INSERT INTO proveedor(nombre_proveedor, ciudad, pais) 
+values ("ChinChing Co.", "Beijing", "China"), 				/*id:1*/
+	   ("El Chinito del Tractor S.R.L.", "Lima", "Perú");	/*id:2*/
+       
+INSERT INTO producto(nombre, precio, cantidad, id_proveedor) 
+values ("Memoría RAM 8GB", 505.5, 20, 1),
+	   ("Procesador AMD A4", 420.3, 5, 2);

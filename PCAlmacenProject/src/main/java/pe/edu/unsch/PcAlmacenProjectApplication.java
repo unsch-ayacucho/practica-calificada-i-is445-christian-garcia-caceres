@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PcAlmacenProjectApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(PcAlmacenProjectApplication.class, args);
 	}
 
